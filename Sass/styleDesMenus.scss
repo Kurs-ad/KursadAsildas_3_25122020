@@ -1,0 +1,333 @@
+@font-face{
+	font-family: shrikhand;
+	src: url(../Shrikhand/Shrikhand-Regular.OpenType);
+}
+
+@font-face{
+	font-family: roboto-regular;
+	src: url(../roboto/Roboto-Regular.ttf);
+	font-size: 600;
+}
+
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99E2D0;
+$color-bg-lightest: #f6f6f6;
+$color-subtitle: #7b7b7b;
+$color-bg-footer: #353535;
+
+body{
+	width: 100%;
+	margin: 0px;
+	font-family: roboto-regular;
+}
+
+.entete{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	&__flecheRetour{
+		position: absolute;
+		left: 0;
+		font-size: 40px;
+		margin-left: 20px;
+		color: black;
+	}
+	& img{
+	}
+}
+
+.photoMenu{
+	height: 600px;
+	object-fit: cover;
+	object-position: center 60%;
+	position: relative;
+	z-index: -1;
+	display: flex;
+	width:100%;
+}
+
+.menuBigScreen{
+	display: flex;
+}
+
+@keyframes apparition{
+	from{
+		transform: scaleY(0);
+		transform-origin: bottom;
+	} to{
+		transform: scaleY(1);
+		transform-origin: bottom;
+	}
+}
+
+@for $i from 1 through 3 {
+		.partieMenu--#{$i}{
+			animation: apparition 1s;
+			animation-delay: 500ms * $i;
+		}
+	}
+
+.coeur-plein{
+	position: absolute;
+	font-size: 20px;
+	color: $color-primary;
+	z-index: -1;
+}
+
+.coeur-vide{
+	position: absolute;
+	font-size: 20px;
+	&:hover{
+		cursor: pointer;
+		z-index: -1;
+		&+ .coeur-plein{
+			cursor: pointer;
+			z-index: inherit;
+		}
+	}
+}
+
+.detailMenu{
+	margin-top: -10%;
+	border-radius: 20px 20px 0 0;
+	background-color: $color-bg-lightest;
+	padding-bottom: 50px;
+	&__entete{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 20px;
+		width: 40%;
+		margin: auto;
+		font-family: shrikhand;
+	}
+	&__coeurs{
+		width: 30px;
+		height: 30px;
+	}
+	&__titre{
+		color: $color-subtitle;
+		margin-left: 20px;
+		text-transform: uppercase;
+	}
+	&--trait{
+		border: 3px solid $color-tertiary;
+		width: 50px;
+		margin-top: 5px;
+	}
+	&__entrees{
+		width: 33%;
+	}
+	&__plats{
+		width: 33%;
+	}
+	&__desserts{
+		width: 33%;
+	}
+}
+
+.choix{
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 20px;
+	height: 80px;
+	border-radius: 20px;
+	overflow: hidden;
+	&__texte{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin: 10px;
+		flex: 1;
+	}
+	&__titre{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin: 0px;
+	}
+	&__detail{
+		margin-top: 8px;
+		margin-bottom: 8px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	&__prix{
+		margin-bottom: 16px;
+		margin-right: 16px;
+	}
+	&__check{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 0px;
+		height: 100%;
+		transition: all 500ms;
+		color: white;
+		background-color: $color-tertiary;
+		& .fa-check-circle{
+			transition: transform 500ms;
+		}
+	}
+	&:hover{
+		.choix__check{
+			width: 70px;
+			transform: scaleX(1);
+		}
+		& .fa-check-circle{
+			transform: rotate(1turn);
+		}
+	}
+}
+
+.boutonCommander{
+	text-align: center;
+}
+
+button{
+	width: 30%;
+	color: white;
+	background-color: $color-secondary;
+	padding: 10px;
+	border-radius: 30px;
+	border: none;
+	background: radial-gradient(ellipse at top left, $color-secondary, $color-primary);
+	box-shadow: 5px 5px 5px grey;
+	& a{
+		color: white;
+		text-decoration: none;
+	}
+	&:hover{
+		filter: brightness(1.05);
+		box-shadow: 5px 5px 5px $color-bg-footer;
+	}
+}
+
+.footer{
+	display: flex;
+	background-color: $color-bg-footer;
+	padding: 40px;
+	&__logo{
+		filter: invert(1);
+		flex: 0.4;
+		transform: scale(0.5);
+	}
+	&__div{
+		flex:0.6;
+		display: flex;
+	}
+	&__menuDinteraction{
+		display: flex;
+		flex: 2;
+		margin: auto;
+		padding-left: 0px;
+	}
+	&__menuDinteraction li{
+		width: 25%;
+		text-align: end;
+		list-style-type: none;
+		filter: invert(1);
+		& i{
+			margin-right: 10px;
+		}
+	}
+	& a{
+		text-decoration: none;
+		color: black;
+	}
+}
+
+@media screen and (max-width: 800px){
+
+	.entete{
+		height: 75px;
+		&__flecheRetour{
+			font-size: 20px;
+		}
+		&__logo{
+			transform: scale(0.5);
+		}
+	}
+
+	.photoMenu{
+		height: 400px;
+	}
+
+	button{
+		width: 40%;
+	}
+
+	.footer{
+		&__menuDinteraction{
+			flex-direction: column;
+			& li{
+				width: inherit;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 599px){
+
+	.menuBigScreen{
+		display: inherit;
+	}
+
+	.photoMenu{
+		height: 200px;
+	}
+	.detailMenu{
+		&__entete{
+			justify-content: space-between;
+			width: 90%;
+			margin: auto;
+		}
+		&__titrePrincipal{
+			margin-left: 0;
+		}
+		&__entrees{
+			margin-bottom: 40px;
+			width: inherit;
+		}
+		&__plats{
+			margin-bottom: 40px;
+			width: inherit;
+		}
+		&__desserts{
+			margin-bottom: 40px;
+			width: inherit;
+		}
+	}
+
+	button{
+		width: 50%;
+	}
+
+	.footer{
+		padding: 20px;
+		flex-direction: column;
+		&__logo{
+			transform: scale(0.4);
+			transform-origin: left;
+		}
+		&__div{
+			flex: inherit;
+		}
+		&__menuDinteraction{
+			flex-direction: column;
+			flex : inherit;
+			width: 90%;
+			margin-left: 0px;
+		}
+		&__menuDinteraction li{
+			width: inherit;
+			margin-bottom: 20px;
+			text-align: inherit;
+		}
+	}
+}

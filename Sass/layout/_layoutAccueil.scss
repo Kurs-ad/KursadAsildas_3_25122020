@@ -1,0 +1,117 @@
+body{
+	width: 100%;
+	margin: 0px;
+	font-family: roboto-regular;
+}
+
+.entete{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	height: 150px;
+	box-shadow: 0 5px 5px #cfcfcf;
+}
+
+.footer{
+	display: flex;
+	background-color: #353535;
+	padding: 40px;
+}
+
+.blocFonctionnement__notice{
+		display: flex;
+		width: 90%;
+		margin: auto;
+		padding-left: 0px;
+		list-style-type: none;
+		&__notice li{
+		display: flex;
+		font-weight: bold;
+		padding: 20px;
+		padding-right: 10px;
+		width: 33%;
+		margin: 20px;
+		background-color: #f6f6f6;
+		margin-bottom: 50px;
+		border-radius: 20px;
+		box-shadow: 5px 5px 10px #eaeaea;
+		position: relative;
+		}
+		& i{
+			width: 20px;
+			margin-right: 20px;
+			color: #7e7e7e;
+		}
+	}
+
+.puces{
+	&__numero{
+		position: absolute;
+		left: -10px;
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    width: 20px;
+	    height: 20px;
+	    background-color: $color-primary;
+	    border-radius: 50%;
+	    color: white;
+	    font-size: 10px;
+	    margin-right: 20px;
+	}
+}
+
+.listeRestaurants{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #f6f6f6;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&__titre{
+		width: 90%;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+	&__choix{
+		width:30%;
+		margin: auto;
+		margin-bottom: 20px;
+		border-radius: 20px;
+		background-color: white;
+		box-shadow: 10px 20px 20px #eaeaea;
+		& img{
+			height: 200px;
+			object-fit: cover;
+			object-position: center 60%;
+			border-radius: 20px 20px 0px 0px;
+			overflow: hidden;
+		}
+	}
+}
+
+.choix{
+	& a{
+		text-decoration: none;
+		color: black;
+		& h2{
+			margin-top: 0px;
+		}
+	}
+	&__description{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px;
+		& p{
+			margin: 0px;
+			margin-top: 5px;
+		}
+		& h2{
+			font-size: 1.2em;
+			margin: 0px;
+		}
+		
+	}
+}
