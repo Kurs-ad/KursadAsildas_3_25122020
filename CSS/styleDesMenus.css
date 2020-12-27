@@ -173,6 +173,7 @@ body {
 }
 
 .choix__prix {
+  font-weight: bold;
   margin-bottom: 16px;
   margin-right: 16px;
 }
@@ -190,6 +191,10 @@ body {
 
 .choix__check .fa-check-circle {
   transition: transform 500ms;
+}
+
+.choix:hover {
+  cursor: pointer;
 }
 
 .choix:hover .choix__check {
