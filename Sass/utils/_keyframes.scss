@@ -1,0 +1,13 @@
+@keyframes apparition{
+	from{
+		opacity: 0.4;
+	}
+}
+
+ @keyframes chargement{
+ 	90%{
+ 		transform: rotate(360deg);
+ 	} 100%{
+ 		transform: scale(0);
+ 	}
+ }

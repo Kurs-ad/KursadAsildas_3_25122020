@@ -1,0 +1,15 @@
+.boutonCommander{
+	text-align: center;
+}
+
+@media screen and (max-width: 800px){
+	button{
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 599px){
+	button{
+		width: 50%;
+	}
+}

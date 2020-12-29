@@ -1,0 +1,20 @@
+.entete{
+	@include centrageDisplay;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	height: 150px;
+	box-shadow: 0 5px 5px #cfcfcf;
+	position: relative;
+}
+
+@media screen and (max-width: 599px){
+
+	.entete{
+		height: inherit;
+		padding-top: inherit;
+		padding-bottom: inherit;
+		&__logo{
+			transform: scale(0.5);
+		}
+	}
+}

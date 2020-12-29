@@ -1,0 +1,44 @@
+.blocAccueil{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	&__localisation{
+		flex: 0.4;
+		@include centrageDisplay;
+		font-size: x-large;
+		font-weight: 700;
+		background-color: $color-bg-darkest;
+	}
+	&__presentation{
+		flex: 0.6;
+		background-color: $color-bg-lightest;
+		padding: 50px;
+		& p{
+			margin-top: 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 800px){
+	.blocAccueil{
+		height: 200px;
+		&__presentation{
+			padding: 0px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: medium;
+		}
+	}
+}
+
+@media screen and (max-width: 599px){
+	.blocAccueil{
+		height: inherit;
+		flex-direction: column;
+		&__presentation{
+			padding-bottom: 30px;
+		}
+	}
+}

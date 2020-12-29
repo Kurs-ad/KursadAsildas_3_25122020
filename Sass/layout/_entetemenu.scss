@@ -1,0 +1,23 @@
+.entete{
+	@include centrageDisplay;
+	height: 150px;
+	&__flecheRetour{
+		position: absolute;
+		left: 0;
+		font-size: 40px;
+		margin-left: 20px;
+		color: black;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.entete{
+		height: 75px;
+		&__flecheRetour{
+			font-size: 20px;
+		}
+		&__logo{
+			transform: scale(0.5);
+		}
+	}
+}

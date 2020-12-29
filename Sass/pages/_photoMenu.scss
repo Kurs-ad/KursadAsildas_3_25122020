@@ -1,0 +1,21 @@
+.photoMenu{
+	height: 600px;
+	object-fit: cover;
+	object-position: center 60%;
+	position: relative;
+	z-index: -1;
+	display: flex;
+	width:100%;
+}
+
+@media screen and (max-width: 800px){
+	.photoMenu{
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 599px){
+	.photoMenu{
+		height: 200px;
+	}
+}

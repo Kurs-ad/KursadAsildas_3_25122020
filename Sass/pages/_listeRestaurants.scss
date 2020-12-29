@@ -1,0 +1,44 @@
+.listeRestaurants{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: $color-bg-lightest;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&__titre{
+		width: 90%;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+	&__choix{
+		width:30%;
+		margin: auto;
+		margin-bottom: 20px;
+		border-radius: 20px;
+		background-color: white;
+		box-shadow: 10px 20px 20px $color-bg-darkest;
+		& img{
+			height: 200px;
+			object-fit: cover;
+			object-position: center 60%;
+			border-radius: 20px 20px 0px 0px;
+			overflow: hidden;
+		}
+	}
+}
+
+@media screen and (max-width: 800px){
+	.listeRestaurants{
+		&__choix{
+			width: 40%;
+		}
+	}
+}
+
+@media screen and (max-width: 599px){
+	.listeRestaurants{
+		flex-direction: column;
+		&__choix{
+			width:90%;
+		}
+	}
+}

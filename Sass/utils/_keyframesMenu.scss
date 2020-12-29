@@ -1,0 +1,16 @@
+@keyframes apparition{
+	from{
+		transform: scaleY(0);
+		transform-origin: bottom;
+	} to{
+		transform: scaleY(1);
+		transform-origin: bottom;
+	}
+}
+
+@for $i from 1 through 3 {
+	.partieMenu--#{$i}{
+		animation: apparition 1s;
+		animation-delay: 500ms * $i;
+	}
+}

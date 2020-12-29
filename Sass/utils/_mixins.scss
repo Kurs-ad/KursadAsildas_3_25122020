@@ -1,0 +1,11 @@
+@mixin centrageDisplay{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin pointillés{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

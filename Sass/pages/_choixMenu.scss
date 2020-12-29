@@ -1,0 +1,50 @@
+.choix{
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 20px;
+	height: 80px;
+	border-radius: 20px;
+	overflow: hidden;
+	&__texte{
+		@include pointillés;
+		margin: 10px;
+		flex: 1;
+	}
+	&__titre{
+		@include pointillés;
+		margin: 0px;
+	}
+	&__detail{
+		margin-top: 8px;
+		margin-bottom: 8px;
+		@include pointillés;
+	}
+	&__prix{
+		font-weight: bold;
+		margin-bottom: 16px;
+		margin-right: 16px;
+	}
+	&__check{
+		@include centrageDisplay;
+		width: 0px;
+		height: 100%;
+		transition: all 500ms;
+		color: white;
+		background-color: $color-tertiary;
+		& .fa-check-circle{
+			transition: transform 500ms;
+		}
+	}
+	&:hover{
+		.choix__check{
+			width: 70px;
+			transform: scaleX(1);
+		}
+		& .fa-check-circle{
+			transform: rotate(1turn);
+		}
+		cursor: pointer;
+	}
+}

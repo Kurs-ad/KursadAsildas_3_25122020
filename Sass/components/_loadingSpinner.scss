@@ -1,0 +1,13 @@
+.loadingSpinner{
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	border: 2px solid $color-bg-darkest;
+	border-top-color: $color-primary;
+	border-bottom-color: $color-secondary;
+	animation: chargement 3s forwards;
+	border-radius: 50%;
+}

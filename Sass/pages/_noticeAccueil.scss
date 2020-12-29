@@ -1,0 +1,62 @@
+.blocFonctionnement{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	&__titre{
+		width: 90%;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+	&__notice{
+		display: flex;
+		width: 90%;
+		margin: auto;
+		padding-left: 0px;
+		list-style-type: none;
+	}
+	&__notice li{
+		display: flex;
+		font-weight: bold;
+		padding: 20px;
+		padding-right: 10px;
+		width: 33%;
+		margin: 20px;
+		background-color: $color-bg-lightest;
+		margin-bottom: 50px;
+		border-radius: 20px;
+		box-shadow: 5px 5px 10px $color-bg-darkest;
+		position: relative;
+	}
+	& i{
+		width: 20px;
+		margin-right: 20px;
+		color: #7e7e7e;
+	}
+}
+
+.puces{
+	&__numero{
+		position: absolute;
+		left: -10px;
+		@include centrageDisplay;
+	    width: 20px;
+	    height: 20px;
+	    background-color: $color-primary;
+	    border-radius: 50%;
+	    color: white;
+	    font-size: 10px;
+	    margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 599px){
+	.blocFonctionnement{
+		& ul{
+			display: inherit;
+		}
+		&__notice li{
+			margin: auto;
+			margin-bottom: 30px;
+			width: inherit;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+.choix{
+	&__description{
+		&__coeurs{
+			width: 30px;
+			height: 30px;
+			position: relative;
+			& .coeur-plein{
+				position: absolute;
+				font-size: 30px;
+				color: $color-primary;
+			}
+			& .coeur-vide{
+				position: absolute;
+				font-size: 30px;
+				background-color: white;
+				&:hover{
+					display: none;
+				}
+			}
+		}
+	}
+}

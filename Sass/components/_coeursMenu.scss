@@ -1,0 +1,19 @@
+.coeur-plein{
+	position: absolute;
+	font-size: 20px;
+	color: $color-primary;
+	z-index: -1;
+}
+
+.coeur-vide{
+	position: absolute;
+	font-size: 20px;
+	&:hover{
+		cursor: pointer;
+		z-index: -1;
+		&+ .coeur-plein{
+			cursor: pointer;
+			z-index: inherit;
+		}
+	}
+}
