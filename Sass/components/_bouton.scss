@@ -1,17 +1,13 @@
 button{
 	color: white;
-	background-color: $color-secondary;
 	padding: 10px;
 	width: 50%;
 	border-radius: 30px;
 	border: none;
 	background: radial-gradient(ellipse at top left, $color-secondary, $color-primary);
-	& a{
-		color: white;
-		text-decoration: none;
-	}
 	&:hover{
 	filter: brightness(1.05);
 	box-shadow: 5px 5px 5px $color-bg-footer;
+	cursor: pointer;
 	}
 }

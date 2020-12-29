@@ -20,6 +20,9 @@
 		color: $color-subtitle;
 		margin-left: 20px;
 		text-transform: uppercase;
+		& h2{
+			margin: 0px;
+		}
 	}
 	&--trait{
 		border: 3px solid $color-tertiary;
