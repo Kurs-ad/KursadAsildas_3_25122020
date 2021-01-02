@@ -67,10 +67,13 @@ img {
 .loadingSpinner {
   opacity: 1;
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 100px;
   height: 100px;
+  z-index: 2;
+  margin-left: -50px;
+  margin-right: -50px;
+  top: 50%;
+  left: 50%;
   border: 2px solid #eaeaea;
   border-top-color: #9356dc;
   border-bottom-color: #ff79da;
